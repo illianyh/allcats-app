@@ -10,8 +10,6 @@ const initialState = {
   name: "",
   lastname: "",
   email: "",
-  postcode: "",
-  town: "",
 };
 
 const CatDelivery = () => {
@@ -44,7 +42,7 @@ const CatDelivery = () => {
     handleBlur,
   } = useValidation(initialState, validateAdoption, setDelivery);
 
-  const { name, lastname, email, postcode, town } = values;
+  const { name, lastname, email } = values;
 
   return (
     <div className="container">
@@ -98,40 +96,6 @@ const CatDelivery = () => {
             <PhoneInput country={"gb"} value={phone} onChange={setPhone} />
           </Field>
           {errors.phone && <Error>{errors.phone}</Error>}
-
-          <Field>
-            <input
-              type="postcode"
-              id="postcode"
-              name="postcode"
-              placeholder="Postcode"
-              value={postcode}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-          </Field>
-          {errors.postcode && <Error>{errors.postcode}</Error>}
-
-          <Field>
-            <Select
-              name="town"
-              placeholder="Town"
-              value={town}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            >
-              {cities.length > 0 ? (
-                cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))
-              ) : (
-                <option>Loading...</option>
-              )}
-            </Select>
-          </Field>
-          {errors.town && <Error>{errors.town}</Error>}
         </fieldset>
 
         {error && <Error>{error} </Error>}

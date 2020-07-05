@@ -24,6 +24,10 @@ export const Field = styled.div`
   width: 100%;
   flex-direction: column;
 
+  .react-tel-input input {
+    width: 100%;
+  }
+
   label {
     margin-bottom: 0.5rem;
     font-size: 1rem;

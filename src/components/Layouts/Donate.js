@@ -27,7 +27,7 @@ const Donate = () => {
         <h2> Why do we need your donation?</h2>
         <div className="header">
           <p>
-            To find lifelong, loving homes for all pets by supporting programs
+            To find lifelong, loving homes for all cats by supporting programs
             and thought leadership that bring people and pets together.
           </p>
         </div>

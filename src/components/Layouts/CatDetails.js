@@ -10,7 +10,7 @@ import { ReactComponent as GenderLogo } from "../../assets/gender.svg";
 
 const Layout = styled.div`
   padding-top: 2rem;
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     display: flex;
   }
 `;
@@ -70,6 +70,18 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
+  flex-direction: column;
+
+  a:first-child {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: unset;
+    a:first-child {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 const Button = styled(Link)`

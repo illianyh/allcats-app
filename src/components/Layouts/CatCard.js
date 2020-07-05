@@ -5,9 +5,8 @@ import styled from "styled-components";
 const TakeHomeBtn = styled.button`
   padding: 0.75rem 1rem;
   margin: 0 0.5rem;
-
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--white);
   background-color: var(--primary);
   border: none;
@@ -22,6 +21,10 @@ const TakeHomeBtn = styled.button`
 
   &:hover {
     background: var(--secondary);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
   }
 `;
 

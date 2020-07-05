@@ -9,16 +9,6 @@ import {
 import useCats from "../../hooks/useCats";
 import styled from "styled-components";
 
-const CatsContainer = styled.div`
-  padding-top: 2rem;
-
-  &.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-
 const ListContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -46,27 +36,25 @@ const CatList = () => {
   const { cats, error, loading } = useCats();
 
   return (
-    <CatsContainer>
-      <div className="container">
-        <Header>Choose Cats</Header>
-        {loading && <Loader />}
-        <ListContainer>
-          {pageOfItems.map((item) => (
-            <CatCard key={item.id} cat={item} />
-          ))}
-        </ListContainer>
-        {error && <Error>Something went wrong</Error>}
-        <Pagination
-          initialPage={1}
-          labelPrevious={"Previous"}
-          labelNext={"Next"}
-          items={cats}
-          pageNeighbours={OFFSET_PAGINATION}
-          pageSize={NUMBER_ITEM_PAGINATION}
-          onChangePage={handlePageChange}
-        />
-      </div>
-    </CatsContainer>
+    <div className="container">
+      <Header>Choose Cats</Header>
+      {loading && <Loader />}
+      <ListContainer>
+        {pageOfItems.map((item) => (
+          <CatCard key={item.id} cat={item} />
+        ))}
+      </ListContainer>
+      {error && <Error>Something went wrong</Error>}
+      <Pagination
+        initialPage={1}
+        labelPrevious={"Previous"}
+        labelNext={"Next"}
+        items={cats}
+        pageNeighbours={OFFSET_PAGINATION}
+        pageSize={NUMBER_ITEM_PAGINATION}
+        onChangePage={handlePageChange}
+      />
+    </div>
   );
 };
 
