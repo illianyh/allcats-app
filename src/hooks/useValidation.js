@@ -24,7 +24,6 @@ const useValidation = (stateInicial, validate, fn) => {
     });
   };
 
-  // Función que se ejecuta cuando el usuario hace submit
   const handleSubmit = (e) => {
     e.preventDefault();
     const errorsValidation = validate(values);
@@ -32,7 +31,6 @@ const useValidation = (stateInicial, validate, fn) => {
     setSubmitForm(true);
   };
 
-  // cuando se realiza el evento de blur
   const handleBlur = () => {
     const errorsValidation = validate(values);
     setErrors(errorsValidation);
