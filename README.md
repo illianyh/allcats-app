@@ -5,7 +5,7 @@ This app consists of the homepage with a listing of all the cats in the centre, 
 
 ## Demo
 
-Hosted at https://quality-sites.github.io/allcats/
+Hosted at https://quizzical-varahamihira-2b9274.netlify.app
 
 ## Built With
 
