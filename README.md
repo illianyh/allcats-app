@@ -9,11 +9,11 @@ Hosted at https://quizzical-varahamihira-2b9274.netlify.app
 
 ## Built With
 
-React, React Hooks and Material UI
+React, React Hooks, Material UI and React Lottie
 
 ## Recommendations / Future Improvements
 
-Login/Authentication to manage an cat adoption application
+Login/Authentication for user to manage cat adoption application
 
 More detailed each of the cat's page and compherensive Donate's page
 
